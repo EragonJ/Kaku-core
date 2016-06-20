@@ -1,0 +1,25 @@
+{
+  "name": "kaku-core",
+  "version": "0.0.1",
+  "description": "This repo keeps shared scripts that can be reused in differnt clients",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+ssh://git@github.com/EragonJ/Kaku-core.git"
+  },
+  "keywords": [
+    "kaku",
+    "music",
+    "scripts",
+    "tool"
+  ],
+  "author": "Chia-Lung, Chen (EragonJ)",
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/EragonJ/Kaku-core/issues"
+  },
+  "homepage": "https://github.com/EragonJ/Kaku-core#readme"
+}
