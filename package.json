@@ -21,5 +21,10 @@
   "bugs": {
     "url": "https://github.com/EragonJ/Kaku-core/issues"
   },
-  "homepage": "https://github.com/EragonJ/Kaku-core#readme"
+  "homepage": "https://github.com/EragonJ/Kaku-core#readme",
+  "dependencies": {
+    "node-itunes-rss-data": "^1.1.1",
+    "request": "^2.72.0",
+    "youtube-dl": "^1.11.1"
+  }
 }
