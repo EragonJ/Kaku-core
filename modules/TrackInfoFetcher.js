@@ -1,3 +1,5 @@
+'use strict';
+
 let EventEmitter = require('events').EventEmitter;
 let YoutubeDownloader = require('youtube-dl');
 let BaseModule = require('../modules/BaseModule');
