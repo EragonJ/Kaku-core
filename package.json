@@ -4,7 +4,7 @@
   "description": "This repo keeps shared scripts that can be reused in differnt clients",
   "main": "index.js",
   "scripts": {
-    "test": "echo \"Error: no test specified\" && exit 1"
+    "test": "./node_modules/mocha/bin/mocha -u tdd -t 5000 --reporter dot --compiler js:babel-register --require ./tests/setup.js --harmony_arrow_functions 'tests/*.test.js'"
   },
   "repository": {
     "type": "git",
@@ -26,5 +26,13 @@
     "node-itunes-rss-data": "^1.1.1",
     "request": "^2.72.0",
     "youtube-dl": "^1.11.1"
+  },
+  "devDependencies": {
+    "babel-register": "^6.9.0",
+    "chai": "^3.5.0",
+    "jsdom": "^9.2.1",
+    "mocha": "^2.5.3",
+    "proxyquire": "^1.7.9",
+    "sinon": "^1.17.4"
   }
 }
