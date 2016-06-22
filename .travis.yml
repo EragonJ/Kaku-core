@@ -1,0 +1,9 @@
+language: node_js
+script:
+  - npm test
+
+before_install:
+  - npm install -g npm@2
+
+node_js:
+  - "5.1.1"
