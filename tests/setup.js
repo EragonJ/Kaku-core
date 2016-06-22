@@ -1,6 +1,5 @@
 'use strict';
 
-var assert = require('assert');
 var chai = require('chai');
 var sinon = require('sinon');
 var jsdom = require('jsdom').jsdom;
