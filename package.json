@@ -4,7 +4,7 @@
   "description": "This repo keeps shared scripts that can be reused in differnt clients",
   "main": "index.js",
   "scripts": {
-    "test": "./node_modules/mocha/bin/mocha -u tdd -t 5000 --reporter dot --compiler js:babel-register --require ./tests/setup.js --harmony_arrow_functions 'tests/*.test.js'"
+    "test": "./node_modules/mocha/bin/mocha -u tdd -t 5000 --reporter dot --compiler js:babel-register --require ./tests/setup.js 'tests/*.test.js'"
   },
   "repository": {
     "type": "git",
@@ -24,6 +24,7 @@
   "homepage": "https://github.com/EragonJ/Kaku-core#readme",
   "dependencies": {
     "node-itunes-rss-data": "^1.1.1",
+    "randomstring": "^1.1.5",
     "request": "^2.72.0",
     "youtube-dl": "^1.11.1"
   },
