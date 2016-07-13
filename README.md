@@ -7,6 +7,7 @@ This repo keeps all shared scripts that will be used in different clients (Deskt
 Related links :
 
 + Kaku Website : http://kaku.rocks
++ Kaku Core : https://github.com/EragonJ/Kaku-core
 + Kaku Desktop App : https://github.com/EragonJ/Kaku
 + Kaku Mobile App : https://github.com/EragonJ/Kaku-app
 
