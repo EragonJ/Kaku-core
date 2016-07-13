@@ -1,6 +1,6 @@
 {
   "name": "kaku-core",
-  "version": "0.0.2",
+  "version": "0.0.3",
   "description": "This repo keeps shared scripts that can be reused in differnt clients",
   "main": "index.js",
   "scripts": {
