@@ -1,4 +1,4 @@
-var RandomString = require('randomstring');
+var UniqueId = require('../../modules/UniqueId');
 
 function BaseTrack(options) {
   options = options || {};
@@ -6,7 +6,7 @@ function BaseTrack(options) {
   var placeholderImagePath = './src/public/images/track-placeholder.png';
 
   this._trackUrlPrefix = '';
-  this.id = options.id || RandomString.generate(6);
+  this.id = options.id || UniqueId(6);
   this.trackType = 'BaseTrack';
   this.title = options.title || 'Unknown Title';
   this.artist = options.artist || 'Unknown Artist';

@@ -1,4 +1,4 @@
-var RandomString = require('randomstring');
+var UniqueId = require('../../modules/UniqueId');
 var EventEmitter = require('events').EventEmitter;
 var BaseTrack = require('../track/BaseTrack');
 
@@ -6,7 +6,7 @@ function BasePlaylist(options) {
   options = options || {};
 
   EventEmitter.call(this);
-  this.id = options.id || RandomString.generate(6);
+  this.id = options.id || UniqueId(6);
   this.platformId = options.id || '';
   this.name = options.name || 'playlist';
   this.type = options.type || 'normal';
