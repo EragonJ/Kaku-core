@@ -23,7 +23,6 @@ function SoundCloudSearcher(config) {
 
 SoundCloudSearcher.prototype.search = function(keyword, limit) {
   limit = limit || 200;
-
   var promise = new Promise((resolve, reject) => {
     SoundCloud.get('/tracks', {
       limit: limit,

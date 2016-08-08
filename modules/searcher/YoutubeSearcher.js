@@ -15,6 +15,7 @@ function YoutubeSearcher(config) {
 };
 
 YoutubeSearcher.prototype.search = function(keyword, limit) {
+  limit = limit || 25;
   var promise = new Promise((resolve, reject) => {
     this._youtube.search(keyword, limit, function(error, result) {
       if (error) {
