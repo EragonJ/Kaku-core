@@ -1,10 +1,8 @@
-'use strict';
+var EventEmitter = require('events').EventEmitter;
+var YoutubeDownloader = require('youtube-dl');
+var BaseModule = require('../modules/BaseModule');
 
-let EventEmitter = require('events').EventEmitter;
-let YoutubeDownloader = require('youtube-dl');
-let BaseModule = require('../modules/BaseModule');
-
-let TrackInfoFetcher = function() {
+var TrackInfoFetcher = function() {
   EventEmitter.call(this);
 
   this._userOptions = {};
@@ -35,7 +33,7 @@ TrackInfoFetcher.constructor = TrackInfoFetcher;
  */
 TrackInfoFetcher.prototype.setOptions = function(options) {
   this._userOptions = {};
-  for (let key in options) {
+  for (var key in options) {
     this._userOptions[key] = options[key];
   }
 };
@@ -48,16 +46,16 @@ TrackInfoFetcher.prototype.changeFormat = function(format) {
 };
 
 TrackInfoFetcher.prototype.getOptions = function() {
-  let options = this._defaultOptions.slice();
+  var options = this._defaultOptions.slice();
 
-  for (let key in this._userOptions) {
+  for (var key in this._userOptions) {
     // we can't override default options
     if (options.indexOf(key) !== -1) {
       continue;
     }
     else {
       // [ '-f bestaudio', '--no-cache-dir  ', ... ]
-      let option = key + ' ' + this._userOptions[key];
+      var option = key + ' ' + this._userOptions[key];
       options.push(option);
     }
   }
@@ -70,8 +68,8 @@ TrackInfoFetcher.prototype.getSupportedFormats = function() {
 };
 
 TrackInfoFetcher.prototype.getInfo = function(url) {
-  let promise = new Promise((resolve, reject) => {
-    let options = this.getOptions();
+  var promise = new Promise((resolve, reject) => {
+    var options = this.getOptions();
     YoutubeDownloader.getInfo(url, options, (error, info) => {
       if (error) {
         console.log(error);
