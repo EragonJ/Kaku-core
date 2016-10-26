@@ -70,7 +70,10 @@ TrackInfoFetcher.prototype.getSupportedFormats = function() {
 TrackInfoFetcher.prototype.getInfo = function(url) {
   var promise = new Promise((resolve, reject) => {
     var options = this.getOptions();
-    YoutubeDownloader.getInfo(url, options, (error, info) => {
+    var args = {
+      maxBuffer: Infinity
+    };
+    YoutubeDownloader.getInfo(url, options, args, (error, info) => {
       if (error) {
         console.log(error);
         reject(error);
