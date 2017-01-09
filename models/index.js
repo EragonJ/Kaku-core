@@ -7,6 +7,7 @@ module.exports = {
     BaseTrack: require('./track/BaseTrack'),
     SoundCloudTrack: require('./track/SoundCloudTrack'),
     VimeoTrack: require('./track/VimeoTrack'),
-    YoutubeTrack: require('./track/YoutubeTrack')
+    YoutubeTrack: require('./track/YoutubeTrack'),
+    MixCloudTrack: require('./track/MixCloudTrack'),
   }
 };
