@@ -15,7 +15,8 @@ MixCloudTrack.prototype.init = function(options) {
   if (!options.url) {
     console.error('MixCloudTrack');
     console.error(options);
-  } else {
+  }
+  else {
     this.platformId = options.url.replace(this._trackUrlPrefix, '');
 
     if (options.name) {

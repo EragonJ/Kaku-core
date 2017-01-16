@@ -6,14 +6,18 @@ function MixCloudSearcher() {
 }
 
 MixCloudSearcher.prototype.search = function(keyword, limit = 20) {
-  let queryURL = `https://api.mixcloud.com/search/?limit=${limit}&q=${keyword}&type=cloudcast`;
+  keyword = encodeURIComponent(keyword);
+  let type = 'cloudcast';
+  let queryURL =
+    `https://api.mixcloud.com/search/?limit=${limit}&q=${keyword}&type=${type}`;
 
   return new Promise((resolve, reject) => {
     request(queryURL, (err, response, body) => {
       if (err) {
         console.error(err);
         reject(err);
-      } else {
+      }
+      else {
         const rawTracks = JSON.parse(body);
         const mixCloudTracks = rawTracks['data'].map(rawTrack => {
           const track = new MixCloudTrack();

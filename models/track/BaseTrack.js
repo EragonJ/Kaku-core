@@ -37,7 +37,8 @@ BaseTrack.fromJSON = function(json) {
     'BaseTrack': BaseTrack,
     'YoutubeTrack': require('./YoutubeTrack'),
     'SoundCloudTrack': require('./SoundCloudTrack'),
-    'VimeoTrack': require('./VimeoTrack')
+    'VimeoTrack': require('./VimeoTrack'),
+    'MixCloudTrack': require('./MixCloudTrack')
   };
 
   var trackConstructor = supportedTracks[trackType];
