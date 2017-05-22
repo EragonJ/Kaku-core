@@ -1,6 +1,6 @@
 {
   "name": "kaku-core",
-  "version": "0.0.11",
+  "version": "0.0.12",
   "description": "This repo keeps shared scripts that can be reused in differnt clients",
   "main": "index.js",
   "scripts": {
@@ -27,7 +27,7 @@
     "node-soundcloud": "0.0.5",
     "request": "^2.72.0",
     "vimeo": "^1.1.4",
-    "youtube-dl-node": "0.0.4",
+    "youtube-dl-node": "0.0.5",
     "youtube-node": "eragonj/youtube-node"
   },
   "devDependencies": {
