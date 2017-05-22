@@ -26,8 +26,8 @@
     "node-itunes-rss-data": "^1.1.1",
     "node-soundcloud": "0.0.5",
     "request": "^2.72.0",
-    "youtube-dl": "eragonj/node-youtube-dl",
     "vimeo": "^1.1.4",
+    "youtube-dl-node": "0.0.4",
     "youtube-node": "eragonj/youtube-node"
   },
   "devDependencies": {

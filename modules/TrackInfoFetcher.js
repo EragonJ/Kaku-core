@@ -1,6 +1,7 @@
 var EventEmitter = require('events').EventEmitter;
-var YoutubeDownloader = require('youtube-dl');
 var BaseModule = require('../modules/BaseModule');
+var YTDL = require('youtube-dl-node').YoutubeDL;
+var ytdl = new YTDL();
 
 var TrackInfoFetcher = function() {
   EventEmitter.call(this);
@@ -45,6 +46,10 @@ TrackInfoFetcher.prototype.changeFormat = function(format) {
   this.emit('format-changed', format);
 };
 
+TrackInfoFetcher.prototype.setPath = function(userPath) {
+  ytdl.setPath(userPath);
+};
+
 TrackInfoFetcher.prototype.getOptions = function() {
   var options = this._defaultOptions.slice();
 
@@ -68,21 +73,8 @@ TrackInfoFetcher.prototype.getSupportedFormats = function() {
 };
 
 TrackInfoFetcher.prototype.getInfo = function(url) {
-  var promise = new Promise((resolve, reject) => {
-    var options = this.getOptions();
-    var args = {
-      maxBuffer: Infinity
-    };
-    YoutubeDownloader.getInfo(url, options, args, (error, info) => {
-      if (error) {
-        console.log(error);
-        reject(error);
-      } else {
-        resolve(info);
-      }
-    });
-  });
-  return promise;
+  var options = this.getOptions();
+  return ytdl.getInfo(url, options)
 };
 
 module.exports = new TrackInfoFetcher();
