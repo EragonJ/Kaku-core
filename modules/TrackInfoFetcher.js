@@ -1,6 +1,6 @@
 var EventEmitter = require('events').EventEmitter;
 var BaseModule = require('../modules/BaseModule');
-var YTDL = require('youtube-dl-node').YoutubeDL;
+var YTDL = require('./YoutubeDL').YoutubeDL;
 var ytdl = new YTDL();
 
 var TrackInfoFetcher = function() {

@@ -27,7 +27,7 @@
     "node-soundcloud": "0.0.5",
     "request": "^2.72.0",
     "vimeo": "^1.1.4",
-    "youtube-dl-node": "0.0.5",
+    "youtube-dl-node": "0.0.6",
     "youtube-node": "eragonj/youtube-node"
   },
   "devDependencies": {
