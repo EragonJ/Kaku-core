@@ -9,5 +9,6 @@ module.exports = {
     VimeoTrack: require('./track/VimeoTrack'),
     YoutubeTrack: require('./track/YoutubeTrack'),
     MixCloudTrack: require('./track/MixCloudTrack'),
+    AudiusTrack: require('./track/AudiusTrack')
   }
 };
