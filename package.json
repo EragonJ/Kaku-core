@@ -33,7 +33,7 @@
   "devDependencies": {
     "babel-register": "^6.9.0",
     "chai": "^3.5.0",
-    "jsdom": "^9.2.1",
+    "jsdom": "^16.5.0",
     "mocha": "^2.5.3",
     "proxyquire": "^1.7.9",
     "sinon": "^1.17.4"
