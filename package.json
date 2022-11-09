@@ -34,7 +34,7 @@
     "babel-register": "^6.9.0",
     "chai": "^3.5.0",
     "jsdom": "^9.2.1",
-    "mocha": "^2.5.3",
+    "mocha": "^10.1.0",
     "proxyquire": "^1.7.9",
     "sinon": "^1.17.4"
   }
